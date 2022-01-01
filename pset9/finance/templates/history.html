@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+        <table class="table tablestriped">
+            <thead>
+                <tr>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-end">Volume</th>
+                    <th class="text-end">Transaction Price</th>
+                    <th class="text-end">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for transaction in transactions %}
+                    <tr>
+                        <td class="text-start">{{ transaction.symbol }}</td>
+                        <td class="text-end">
+                            {% if transaction.volume > 0 %}
+                                <a>+{{ transaction.volume }}</a>
+                            {% else %}
+                                <a>{{ transaction.volume }}</a>
+                            {% endif %}
+                        </td>
+                        <td class="text-end"> {{ transaction.transaction_price | usd}} </td>
+                        <td class="text-end">{{ transaction.time}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
