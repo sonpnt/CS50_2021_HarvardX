@@ -1,0 +1,1 @@
+SELECT COUNT(rating) FROm ratings WHERE rating = 10;
