@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            function check1()
+            {
+                let feedback1 = document.querySelector('#feedback1');
+                let six = document.querySelector('#six');
+                let ten = document.querySelector('#ten');
+                let sixteen = document.querySelector('#sixteen');
+                six.onclick = function button1()
+                {
+                    feedback1.innerHTML = 'Incorrect';
+                    six.style.backgroundColor = 'red';
+                }
+                ten.onclick = function button1()
+                {
+                    feedback1.innerHTML = 'Incorrect';
+                    ten.style.backgroundColor = 'red';
+                }
+                sixteen.onclick = function button1()
+                {
+                    feedback1.innerHTML = 'Correct!';
+                    sixteen.style.backgroundColor = 'green';
+                }
+            };
+            document.addEventListener('DOMContentLoaded', check1);
+
+            function check2()
+            {
+                let answer = document.querySelector('#answer').value;
+                let feedback2 = document.querySelector('#feedback2');
+                if (answer == '1915')
+                {
+                    feedback2.innerHTML = 'Correct';
+                    //feedback2.style.color = 'green';
+                    document.querySelector('#answer').style.backgroundColor = 'green';
+                }
+                else
+                {
+                    feedback2.innerHTML = 'Incorrect';
+                    //feedback2.style.color = 'red';
+                    document.querySelector('#answer').style.backgroundColor = 'red';
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>How many states does Germany have?</h3>
+                <button id="six">Six states</button>
+                <button id="ten">Ten states</button>
+                <button id="sixteen">Sixteen states</button>
+                <p id="feedback1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>On which year did Einstein first propose the theory of general relativity?</h3>
+                <form onsubmit="check2(); return false;">
+                    <input id="answer" type="text">
+                    <input type="submit" value="Check Answer">
+                </form>
+                <p id="feedback2"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>

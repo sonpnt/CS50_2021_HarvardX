@@ -1,0 +1,115 @@
+/* Stylesheet 1: */
+body {
+    font: 100% Lucida Sans, Verdana;
+    margin: 20px;
+    line-height: 26px;
+    text-decoration: none;
+
+}
+
+.wrapper {
+    position: relative;
+    overflow: auto;
+    text-decoration: none;
+}
+
+#top, #sidebar, #bottom, .menuitem {
+    border-radius: 4px;
+    margin: 4px;
+    text-decoration: none;
+}
+
+#top {
+    background-color: #003399;
+    color: #ffffff;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#menubar {
+    width: 200px;
+    float: left
+
+}
+
+#main {
+    padding: 10px;
+    margin: 0 210px;
+    height: 500px;
+}
+
+#sidebar {
+    background-color: #32a4e7;
+    color: #ffffff;
+    padding: 10px;
+    width: 180px;
+    height: 490px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    font-size: 70%;
+}
+
+#bottom {
+    border: 1px solid #d4d4d4;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 70%;
+    line-height: 14px;
+}
+
+#top h1, #top p, #menulist {
+    margin: 0;
+    padding: 0;
+}
+
+.menuitem {
+    background-color: #f1f1f1;
+    border: 1px solid #d4d4d4;
+    list-style-type: none;
+    padding: 2px;
+    cursor: pointer;
+    color: black;
+
+}
+
+.menuitem:hover {
+    background-color: #003399;
+    color: white;
+    font-weight:bold;
+}
+
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media (max-width: 800px) {
+    #sidebar {
+        width: auto;
+        position: relative;
+    }
+    #main {
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+    #menubar {
+        width: auto;
+        float: none;
+    }
+    #main {
+        margin: 0;
+    }
+}

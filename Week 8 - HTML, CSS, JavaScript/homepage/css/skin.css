@@ -1,0 +1,59 @@
+.navbar-inverse .navbar-nav > li > a {
+    margin-left: 10px;
+}
+
+#about .welcome-block h3 {
+    margin: 0 0 35px;
+}
+
+#about .welcome-block a {
+    color: white;
+}
+
+#about .recent-works img {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    margin-right: 35px;
+    max-width: 100px;
+    max-height: 100px;
+    background-color: white;
+}
+
+#about .message-body {
+    margin-bottom: 15px;
+}
+
+.work-item {
+    font-size: 13px;
+}
+
+textarea.form-control {
+    height: 170px;
+}
+
+#portfolio {
+    background-color: #F0F0F0;
+}
+
+.portfolio-item {
+    width: 24%;
+}
+
+.portfolio-item img {
+    padding: 1px;
+    background-color: rgba(54, 55, 50, 0.79);
+}
+
+.press-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.press-item a img {
+    height: 40px;
+}
+
+/*CV Subpage*/
+#summary {
+    color: black;
+}
